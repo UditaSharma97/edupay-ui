@@ -1,0 +1,18 @@
+.errorTextStyle {
+    align-self: flex-end;
+    color: 'rgb(255, 0, 0)';
+    font-size: 15;
+    font-weight: 'bold';
+    margin-right: '15%'
+  }
+.viewStyle {
+    flex: 1;
+    flex-direction: 'column';
+    justify-content: 'center';
+    align-items: 'center';
+    background-color: 'rgb(242, 242, 242)'
+  }
+.imageStyle {
+    height: 120;
+    width: 200
+  }
