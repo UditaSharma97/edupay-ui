@@ -9,15 +9,14 @@ const TextComponent = (props) =>{
         <h1 style= {commonStyle}>
           {props.displayText}
         </h1>
-        //TouchableOpacity
         <div
           style= {commonStyle}
-          onPress= {props.onPress}
+          onClick= {props.onClick}
         >
           <h1 style= {textStyle}>
             {props.navigationText}
           </h1>
-        </div> //TouchableOpacity
+        </div> 
       </div>
   )
 }

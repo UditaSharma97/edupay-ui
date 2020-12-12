@@ -5,19 +5,19 @@ import React from 'react';
 const InputComponent = (props) => {
 
     return (
-    <input style= {[textInputStyle,
+    <input style= {textInputStyle,
                        {padding: props.padding,
                         borderWidth: props.borderWidth,
                         borderColor: props.borderColor,
-                        fontSize: props.fontSize}]}
+                        fontSize: props.fontSize}}
        placeholder= {props.placeholderText}
-       placeholderTextColor= 'rgb(179, 179, 179)'
+       placeholder-text-color= 'rgb(179, 179, 179)'
        multiline= {props.allowMultiline}
        autoCapitalize= 'none'
-       autoCorrect= {false}
-       autoComplete= {false}
-       secureTextEntry= {props.isHiddenText}
-       onChangeText= {props.onChangeText}
+       autoCorrect= "false"
+       autoComplete= "false"
+       type= {props.inputType}
+       onChange= {props.onChange}
     />
   );
 }

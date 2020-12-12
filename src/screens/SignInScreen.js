@@ -58,6 +58,7 @@ const SignInScreen= ({navigation})=> {
     <div className= {styles.viewStyle}>
       <img
         className= {styles.imageStyle}
+        alt= "ohh no!! no img :P"
         //source= {require('../resources/AppLogo.png')}
       />
       <InputComponent
@@ -66,7 +67,7 @@ const SignInScreen= ({navigation})=> {
         borderWidth= {3}
         borderColor= 'black'
         fontSize= {20}
-        onChangeText= {(userName)=> {
+        onChange= {(userName)=> {
                         setResponseError('');
                         setUserName(userName);
                       }}
@@ -83,8 +84,8 @@ const SignInScreen= ({navigation})=> {
         borderWidth= {3}
         borderColor= 'black'
         fontSize= {20}
-        isHiddenText
-        onChangeText= {(password)=> {
+        inputType= "password"
+        onChange= {(password)=> {
                         setResponseError('');
                         setPassword(password);
                       }}
@@ -97,7 +98,7 @@ const SignInScreen= ({navigation})=> {
       }
       <ButtonActionComponent
         buttonTitle= {`${SIGN_IN_TEXT}`}
-        onPress= {validateCredentials}
+        onClick= {validateCredentials}
         buttonColor= 'rgb(204, 204, 255)'
         marginTop= {30}
         marginLeft= {50}
@@ -115,7 +116,7 @@ const SignInScreen= ({navigation})=> {
       <TextComponent
         displayText= {`${NEW_PROFILE_TEXT}`}
         navigationText= {`${JOIN_NOW_TEXT}`}
-        onPress= {()=> navigation.navigate(JOIN_NOW_SCREEN)}
+        onClick= {()=> navigation.navigate(JOIN_NOW_SCREEN)}
       />
     </div>
   )

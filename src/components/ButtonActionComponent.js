@@ -5,7 +5,6 @@ const ButtonActionComponent = (props) => {
 
   return (
     <div
-    //<TouchableOpacity
       style= {{touchableOpacityStyle,
               backgroundColor: props.buttonColor,
               marginTop: props.marginTop,
@@ -13,13 +12,12 @@ const ButtonActionComponent = (props) => {
               marginRight: props.marginRight,
               marginBottom: props.marginBottom
       }}
-      onPress= {props.onPress}
+      onClick= {props.onClick}
      >
         <h1 style= {textStyle}>
           {props.buttonTitle}
         </h1>
     </div>
-    //</TouchableOpacity>
   );
 }
 
