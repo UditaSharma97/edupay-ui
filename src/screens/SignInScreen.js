@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {withNavigation} from 'react-navigation';
+//import {withNavigation} from 'react-navigation';
 //import Toast from 'react-native-simple-toast';
 import { AsyncStorage } from 'AsyncStorage';
 //import {Text, View, Image, StyleSheet, AsyncStorage} from 'react-native';
@@ -14,7 +14,7 @@ import {USERNAME_REQUIRED_TEXT, PASSWORD_REQUIRED_TEXT,
         NEW_PROFILE_TEXT, JOIN_NOW_TEXT,
         JOIN_NOW_SCREEN, SOME_ERROR_OCCURED_TEXT
       } from '../constants/StringConstants';
-import {APP_LOGO_PATH} from '../constants/ResourceConstants';
+//import {APP_LOGO_PATH} from '../constants/ResourceConstants';
 
 const SignInScreen= ({navigation})=> {
 
@@ -25,7 +25,7 @@ const SignInScreen= ({navigation})=> {
   const [responseError, setResponseError]= useState('');
 
   ///////////////////////////////////////////////////// Validation Logic Start
-  validateCredentials= async()=> {
+  const validateCredentials= async()=> {
     setUserNameError('');
     setPasswordError('');
     setResponseError('');
@@ -58,7 +58,7 @@ const SignInScreen= ({navigation})=> {
     <div className= {styles.viewStyle}>
       <img
         className= {styles.imageStyle}
-        source= {require('../resources/AppLogo.png')}
+        //source= {require('../resources/AppLogo.png')}
       />
       <InputComponent
         placeholderText= {`${USERNAME_PLACEHOLDER_TEXT}`}
@@ -105,7 +105,9 @@ const SignInScreen= ({navigation})=> {
         marginBottom= {20}
       />
       {responseError ?
-        <h1 classsname={styles.errorTextStyle} style= {{alignSelf: 'center', marginLeft: '15%', marginBottom: '5%'}}>
+        <h1 classsname={styles.errorTextStyle} 
+        //style= {{alignSelf: 'center', marginLeft: '15%', marginBottom: '5%'}}
+        >
           {responseError}
         </h1>
           : null
@@ -125,4 +127,4 @@ SignInScreen.navigationOptions= ()=> {
   };
 };
 
-export default withNavigation(SignInScreen);
+export default SignInScreen;//withNavigation(SignInScreen);
