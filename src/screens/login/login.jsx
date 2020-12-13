@@ -1,18 +1,18 @@
 import React from "react";
-import loginImg from "../../login.svg"
+import { ADMIN_HOME } from "../../constants/pageNames";
+import loginImg from "../../money.svg"
 import "./style.css";
 
-export class Register extends React.Component{
+export class Login extends React.Component{
 
     constructor(props){
         super(props);
     }
 
     render(){
-
         return (
             <div className="base-container" ref={this.props.containerRef}>
-              <div className="header">Register</div>
+              <div className="header">Login</div>
               <div className="content">
                 <div className="image">
                   <img src={loginImg} />
@@ -23,23 +23,18 @@ export class Register extends React.Component{
                     <input type="text" name="username" placeholder="username" />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="text" name="email" placeholder="email" />
-                  </div>
-                  <div className="form-group">
                     <label htmlFor="password">Password</label>
-                    <input type="text" name="password" placeholder="password" />
+                    <input type="password" name="password" placeholder="password" />
                   </div>
                 </div>
               </div>
               <div className="footer">
-                <button type="button" className="btn">
-                  Register
+                <button type="button" className="btn" onClick={()=>{this.props.history.push(ADMIN_HOME)}}>
+                  Login
                 </button>
               </div>
             </div>
           );
-
     }
 
 }
