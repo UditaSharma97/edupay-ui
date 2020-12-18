@@ -77,7 +77,7 @@ export class RegisterFormComponent extends React.Component{
                 </div>
                 <div className="content">
                     <div className="image">
-                    <img src={loginImg} />
+                        <img src={loginImg} />
                     </div>
                     <div className="form">
                     <div className="form-group">

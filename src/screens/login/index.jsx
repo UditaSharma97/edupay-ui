@@ -118,6 +118,11 @@ class IndexPage extends React.Component {
               <div className="container">
                 {isLogginActive && <LoginFormComponent  history={this.props.history} containerRef={(ref) => this.current = ref}/>}
                 {!isLogginActive && <RegisterFormComponent history={this.props.history} containerRef={(ref) => this.current = ref}/>}
+                <div className="toggleLogin">
+                  <button className='btn'  current = {current} containerRef={(ref)=> this.rightSide = ref} onClick={this.changeState.bind(this)} >
+                    {current}
+                  </button>
+                </div>
               </div>
               <RightSide current = {current} containerRef={(ref)=> this.rightSide = ref} onClick={this.changeState.bind(this)} />
           </div>

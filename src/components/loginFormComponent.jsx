@@ -69,15 +69,13 @@ class LoginFormComponent extends React.Component{
 
     render(){
         return(
-
-            <div className="">
                 <div className="base-container" ref={this.props.containerRef}>
                     <div className="header">
                         Login
                     </div>
                     <div className="content">
                         <div className="image">
-                        <img src={loginImg} />
+                            <img src={loginImg} />
                         </div>
                         <div className="form">
                         <div className="form-group">
@@ -112,10 +110,7 @@ class LoginFormComponent extends React.Component{
                         Login
                         </button> */}
                     </div>
-                    </div>
-
-            </div>
-
+                </div>
         );
     }
 
